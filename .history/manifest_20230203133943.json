@@ -1,9 +1,9 @@
 {
   "vendor": "itgloberspartnercl",
-  "name": "bullets-diagramation",
+  "name": "bullets-diagramations",
   "version": "0.0.1",
   "title": "Bullets Diagramations",
-  "description": "Es un contexto de elementos que renderizaran los niveles inferiores dentro de una  lista de bullets con imagenes",
+  "description": "Es un constexto de elementos que renderiza lista de categorias",
   "builders": {
     "react": "3.x",
     "messages": "1.x",
