@@ -3,9 +3,8 @@
       "BulletGroup":{
         "type": "array",
         "title": "Bullets Group",
-        "items": {
+        "items": [{
           "properties":{
-  
             "image": {
               "$ref":"app:vtex.native-types#/definitions/url",
               "title":"Imagen",
@@ -24,7 +23,7 @@
               "default": ""
             }
           }
-        }
+        }]
       }
     }
   }
