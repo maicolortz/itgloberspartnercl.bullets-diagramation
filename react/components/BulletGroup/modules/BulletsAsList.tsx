@@ -22,6 +22,7 @@ titleBullet={bullet.titleBullet}
         newTab:false
     }
  }
+ price={bullet.price}
  />
     })
 )

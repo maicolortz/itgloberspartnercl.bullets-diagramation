@@ -11,8 +11,7 @@ export interface BulletGroupProps {
 }
 
 const BulletGroup = ({
-  bullets,
-  children
+  bullets
 }: PropsWithChildren<BulletGroupProps>) => {
 
  /*  const handles = useCssHandles(['bullet_container']); */
@@ -29,33 +28,17 @@ return(
 {
 
   isMobile
+
   ?
   <div className={handles.bullet__container}>{bulletsGroup}</div>
   :
-  children
+  <div className={handles.bullet__container}>{bulletsGroup}</div>
+  
 }
   </ListContextProvider>
 )
 
-/*const newListContextValue = list.concat(bullets)
-  
-   return (
-    <ListContextProvider list={newListContextValue}>
-      {
-        isMobile
-          ?
-          <div className={handles.bullet_container}>
-            {
-              bullets
-            }
-          </div>
-          :
-          <div>
-            {children}
-          </div>
-      }
-    </ListContextProvider>
-  ) */
+
 }
 
 export default BulletGroup
