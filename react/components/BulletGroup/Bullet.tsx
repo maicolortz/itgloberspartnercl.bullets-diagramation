@@ -9,16 +9,18 @@ import './BulletGroup/index.css' */
 type Props = {
   src:string
   titleBullet:string
+  price:number
   link:LinkProps
 /*   bullet: BulletType,
   isMobile: boolean; */
 }
-const Bullet = ({ src,titleBullet,link }: Props) => {
+const Bullet = ({ src,titleBullet,link,price }: Props) => {
 const CSS_HANDLES = [
   'bullet__item--link',
  'bullet__item',
   'bullet__item--image',
-   'bullet__item--title'];
+   'bullet__item--title',
+   'bullet__item--price'];
   const handles = useCssHandles(CSS_HANDLES)
    
 return <div className={` pt1 pl5 ${handles.bullet__item}`}>
@@ -26,10 +28,10 @@ return <div className={` pt1 pl5 ${handles.bullet__item}`}>
   className={handles["bullet__item--link"]}
   >
     <img className={`${handles['bullet__item--image']}  externalClass`} src={src} alt={titleBullet} />
-    <p>Mi imagen {src}</p>
-    <p>{titleBullet}</p>
+    <p className={handles["bullet__item--title"]}>{titleBullet}</p>
+    <p className={handles["bullet__item--price"]}>${price}</p>
   </Link>
-  Mi propio bullet</div>
+  </div>
 }
 Bullet.schema = {
   title: "Bullet",
@@ -45,39 +47,3 @@ Bullet.schema = {
   }
 }
 export default Bullet
-/* const CSS_HANDLES = ['bullet__link', 'bullet__item', 'bullet__image', 'bullet__title'];
-
-const Bullet = ({ bullet, isMobile }: prop) => {
-
-
-  const handles = useCssHandles(CSS_HANDLES)
-
-  return (
-    <div className={handles["bullet__item"]} >
-      <Link 
-      to={bullet.link.url}
-       target={bullet.link.newTab ? '_blank' : ''} className={handles.bullet__link} >
-        <img src={bullet.image} alt={bullet.image} className={handles.bullet_image} />
-        {
-          isMobile && <h3 className={handles.bullet__title}>{bullet.titleBullet}</h3>
-        }
-      </Link>
-    </div>
-  )
-}
-
-Bullet.schema = {
-  title: "Bullet",
-  type: "object",
-  properties: {
-    src: {
-      title: "Imagen de Bullet",
-      type: "string",
-      widget: {
-        "ui:widget": "image-uploader"
-      }
-    }
-  }
-}
-
-export  default Bullet  */

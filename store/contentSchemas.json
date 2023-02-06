@@ -21,6 +21,10 @@
               "title":"Link de Bullet",
               "$ref": "app:vtex.native-types#/definitions/link",
               "default": ""
+            },
+            "price":{
+              "title":"price de bullet",
+              "default":500000
             }
           }
         }]

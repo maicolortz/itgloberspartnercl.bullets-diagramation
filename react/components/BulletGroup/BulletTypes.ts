@@ -4,6 +4,7 @@ export type BulletType={
   image: string;
   titleBullet:string;
   link?:LinkProps;
+  price:number;
 }
 export interface LinkProps{
   url: string;
